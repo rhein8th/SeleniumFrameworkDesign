@@ -10,9 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import ecommerce.pageObjects.LandingPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class StandAloneTest {
+public class SubmitOrderTest {
 
 	public static void main(String[] args) {
 		
@@ -21,12 +23,14 @@ public class StandAloneTest {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
-		driver.get("https://rahulshettyacademy.com/client");
+	
 		//LANDING PAGE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-		//LandingPage landingPage = new LandingPage(driver);
-		driver.findElement(By.xpath("//input[@id='userEmail']")).sendKeys("rhein.bermillo@rahulshettyacademy.com");
-		driver.findElement(By.xpath("//input[@id='userPassword']")).sendKeys("Android12345");
-		driver.findElement(By.xpath("//input[@id='login']")).click();
+		LandingPage landingPage = new LandingPage(driver);
+		landingPage.goTo();
+		landingPage.loginApplication("rhein.bermillo@rahulshettyacademy.com", "Android12345");
+		
+		
+		//SHOP PAGE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".mb-3")));
