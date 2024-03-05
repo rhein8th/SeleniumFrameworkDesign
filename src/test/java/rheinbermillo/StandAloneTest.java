@@ -16,7 +16,7 @@ public class StandAloneTest {
 
 	public static void main(String[] args) {
 		
-		String productName = "I PHONE";
+		String productName = "ZARA COAT 3";
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -41,7 +41,8 @@ public class StandAloneTest {
 		wait.until(ExpectedConditions.invisibilityOf(driver.findElement(By.cssSelector(".ng-animating"))));
 		
 		driver.findElement(By.xpath("//button[@routerlink='/dashboard/cart']")).click();
-		
+		//driver.findElement(By.cssSelector("	[routerlink*='cart']")).click();
+	
 		//CART@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='cartSection']/h3")));
