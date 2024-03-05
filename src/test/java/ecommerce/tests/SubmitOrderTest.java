@@ -1,33 +1,23 @@
-package rheinbermillo;
+package ecommerce.tests;
 
-import java.time.Duration;
+import java.io.IOException;
 import java.util.List;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.testng.annotations.Test;
+import ecommerce.TestComponents.BaseTest;
 import ecommerce.pageObjects.CartPage;
-import ecommerce.pageObjects.LandingPage;
 import ecommerce.pageObjects.ProductPage;
 import ecommerce.pageObjects.CheckoutPage;
 import ecommerce.pageObjects.ConfirmationPage;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class SubmitOrderTest {
+public class SubmitOrderTest extends BaseTest{
 
-	public static void main(String[] args) {
+	@Test
+	public void submitOrder() throws IOException, InterruptedException{
 		
 		String productName = "ZARA COAT 3";
 		String initialCountryText = "hi";
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().window().maximize();
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		//LANDING PAGE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-		LandingPage landingPage = new LandingPage(driver);
-		landingPage.goTo();
 		ProductPage productPage = landingPage.loginApplication("rhein.bermillo@rahulshettyacademy.com", "Android12345");	
 		//PRODUCT PAGE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		List<WebElement> products = productPage.getProductList();
@@ -43,7 +33,7 @@ public class SubmitOrderTest {
 		ConfirmationPage confirmationPage = checkoutPage.submitOrder();
 		String confirmMessage = confirmationPage.getConfirmationMessage();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("Thankyou for the order."));
-		driver.close();
+	
 	
 	}
 
