@@ -48,14 +48,14 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 	}
-	@BeforeMethod
+	@BeforeMethod (alwaysRun = true)
 	public LandingPage launchApplication() throws IOException { 	//LANDING PAGE@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 		driver = initializeDriver();
 		landingPage = new LandingPage(driver);
 		landingPage.goTo();
 		return landingPage;
 	}
-	@AfterMethod
+	@AfterMethod (alwaysRun = true)
 	public void tearDown() {
 		driver.close();
 	}

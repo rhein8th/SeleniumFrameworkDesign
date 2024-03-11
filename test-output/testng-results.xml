@@ -1,25 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-05T21:39:07 PST" name="Default suite" finished-at="2024-03-05T21:39:11 PST" duration-ms="4717">
+  <suite started-at="2024-03-11T20:40:14 PST" name="Suite" finished-at="2024-03-11T20:40:39 PST" duration-ms="24821">
     <groups>
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" name="submitOrder" class="ecommerce.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2024-03-05T21:39:07 PST" name="Default test" finished-at="2024-03-05T21:39:11 PST" duration-ms="4717">
-      <class name="ecommerce.tests.ErrorValidation">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ecommerce.tests.ErrorValidation@3f191845]" started-at="2024-03-05T21:39:07 PST" name="launchApplication" finished-at="2024-03-05T21:39:11 PST" duration-ms="4302" status="PASS">
+    <test started-at="2024-03-11T20:40:14 PST" name="Error Validation" finished-at="2024-03-11T20:40:14 PST" duration-ms="7">
+    </test> <!-- Error Validation -->
+    <test started-at="2024-03-11T20:40:14 PST" name="Submit Order Test" finished-at="2024-03-11T20:40:39 PST" duration-ms="24821">
+      <class name="ecommerce.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" started-at="2024-03-11T20:40:14 PST" name="launchApplication" finished-at="2024-03-11T20:40:18 PST" duration-ms="4206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder()[pri:0, instance:ecommerce.tests.ErrorValidation@3f191845]" started-at="2024-03-05T21:39:11 PST" name="submitOrder" finished-at="2024-03-05T21:39:11 PST" duration-ms="342" status="PASS">
+        <test-method signature="submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" started-at="2024-03-11T20:40:18 PST" name="submitOrder" data-provider="getData" finished-at="2024-03-11T20:40:33 PST" duration-ms="14797" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rhein.bermillo@rahulshettyacademy.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[ZARA COAT 3]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:ecommerce.tests.ErrorValidation@3f191845]" started-at="2024-03-05T21:39:11 PST" name="tearDown" finished-at="2024-03-05T21:39:11 PST" duration-ms="50" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" started-at="2024-03-11T20:40:33 PST" name="tearDown" finished-at="2024-03-11T20:40:33 PST" duration-ms="58" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- ecommerce.tests.ErrorValidation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" started-at="2024-03-11T20:40:33 PST" name="launchApplication" finished-at="2024-03-11T20:40:38 PST" duration-ms="4710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" started-at="2024-03-11T20:40:38 PST" name="submitOrder" data-provider="getData" finished-at="2024-03-11T20:40:39 PST" duration-ms="971" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rhein.bermillo1@rahulshettyacademy.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Android12345]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[IPHONE 13 PRO]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because "prod" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)" because "prod" is null
+at ecommerce.pageObjects.ProductPage.addProductToCart(ProductPage.java:48)
+at ecommerce.tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:26)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ecommerce.tests.SubmitOrderTest@268f106e]" started-at="2024-03-11T20:40:39 PST" name="tearDown" finished-at="2024-03-11T20:40:39 PST" duration-ms="47" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ecommerce.tests.SubmitOrderTest -->
+    </test> <!-- Submit Order Test -->
+  </suite> <!-- Suite -->
 </testng-results>
