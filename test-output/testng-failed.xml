@@ -10,7 +10,7 @@
     <classes>
       <class name="ecommerce.tests.SubmitOrderTest">
         <methods>
-          <include name="submitOrder" invocation-numbers="1"/>
+          <include name="submitOrder"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>

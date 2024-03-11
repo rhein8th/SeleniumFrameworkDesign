@@ -48,6 +48,6 @@ public class SubmitOrderTest extends BaseTest{
 	
 	@DataProvider
 	public Object[][] getData() {
-		return new Object [][] {{"rhein.bermillo@rahulshettyacademy.com","Android12345","ZARA COAT 3"},{"rhein.bermillo1@rahulshettyacademy.com","Android12345","IPHONE 13 PRO"}};
+		return new Object [][] {{"rhein.bermillo@rahulshettyacademy.com","Android12345","ADIDAS ORIGINAL"},{"rhein.bermillo1@rahulshettyacademy.com","ZARA COAT 3"}};
 	}
 }

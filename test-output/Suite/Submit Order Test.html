@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Mar 11 20:40:14 PST 2024</td>
+<td>Started on:</td><td>Mon Mar 11 21:25:29 PST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>24 seconds (24821 ms)</td>
+<tr><td>Total time:</td><td>7 seconds (7584 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td>Purchase </td>
 </tr><tr>
@@ -76,27 +76,26 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ecommerce.tests.SubmitOrderTest.submitOrder()'><b>submitOrder</b><br>Test class: ecommerce.tests.SubmitOrderTest<br>Parameters: rhein.bermillo1@rahulshettyacademy.com, Android12345, IPHONE 13 PRO</td>
-<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)&quot; because &quot;prod&quot; is null
-	at ecommerce.pageObjects.ProductPage.addProductToCart(ProductPage.java:48)
-	at ecommerce.tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:26)
+<td title='ecommerce.tests.SubmitOrderTest.submitOrder()'><b>submitOrder</b><br>Test class: ecommerce.tests.SubmitOrderTest</td>
+<td><div><pre>org.testng.internal.reflect.MethodMatcherException: 
+[public void ecommerce.tests.SubmitOrderTest.submitOrder(java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: submitOrder([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2])
+Arguments: [(java.lang.String) rhein.bermillo1@rahulshettyacademy.com,(java.lang.String) ZARA COAT 3]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1740117770", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1740117770'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)&quot; because &quot;prod&quot; is null
-	at ecommerce.pageObjects.ProductPage.addProductToCart(ProductPage.java:48)
-	at ecommerce.tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:26)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace817027806", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace817027806'><pre>org.testng.internal.reflect.MethodMatcherException: 
+[public void ecommerce.tests.SubmitOrderTest.submitOrder(java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: submitOrder([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2])
+Arguments: [(java.lang.String) rhein.bermillo1@rahulshettyacademy.com,(java.lang.String) ZARA COAT 3]
+	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
+	at org.testng.internal.Parameters.injectParameters(Parameters.java:909)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:37)
 	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
@@ -112,7 +111,7 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>0</td>
+<td>7</td>
 <td>ecommerce.tests.SubmitOrderTest@268f106e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -124,9 +123,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='ecommerce.tests.SubmitOrderTest.submitOrder()'><b>submitOrder</b><br>Test class: ecommerce.tests.SubmitOrderTest<br>Parameters: rhein.bermillo@rahulshettyacademy.com, Android12345, ZARA COAT 3</td>
+<td title='ecommerce.tests.SubmitOrderTest.submitOrder()'><b>submitOrder</b><br>Test class: ecommerce.tests.SubmitOrderTest<br>Parameters: rhein.bermillo@rahulshettyacademy.com, Android12345, ADIDAS ORIGINAL</td>
 <td></td>
-<td>14</td>
+<td>2</td>
 <td>ecommerce.tests.SubmitOrderTest@268f106e</td></tr>
 </table><p>
 </body>
