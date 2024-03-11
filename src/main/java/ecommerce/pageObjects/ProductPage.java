@@ -21,12 +21,15 @@ public class ProductPage extends AbstractComponent{
 	}
 	
 	//Page Factory
-	@FindBy(css="div[class='container'] div[class='row']")
+	//@FindBy(css="div[class='container'] div[class='row']")
+	@FindBy(css=".mb-3")
 	List<WebElement> products;
 	@FindBy(css=".ng-animating")
 	WebElement spinner;
 	
-	By productText = By.cssSelector("div[class='container'] div[class='row']");
+	//By productText = By.cssSelector("div[class='container'] div[class='row']");
+	By productText = By.cssSelector(".mb-3");
+	
 	By addToCart = By.cssSelector(".card-body button:last-child");
 	By toastMessage = By.cssSelector("#toast-container");
 	

@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ecommerce.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder(rhein.bermillo1@rahulshettyacademy.com, Android12345, IPHONE 13 PRO)">submitOrder(rhein.bermillo1@rahulshettyacademy.com, Android12345, IPHONE 13 PRO)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ecommerce.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder">submitOrder</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -117,7 +117,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="ecommerce.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ZARA COAT 3)">submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ZARA COAT 3)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="ecommerce.tests.SubmitOrderTest" class="method navigator-link" hash-for-method="submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ADIDAS ORIGINAL)">submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ADIDAS ORIGINAL)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -140,19 +140,20 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="submitOrder(rhein.bermillo1@rahulshettyacademy.com, Android12345, IPHONE 13 PRO)">
-                  </a> <!-- submitOrder(rhein.bermillo1@rahulshettyacademy.com, Android12345, IPHONE 13 PRO) -->
+                  <a name="submitOrder">
+                  </a> <!-- submitOrder -->
                   <span class="method-name">submitOrder</span>
-                  <span class="parameters">(rhein.bermillo1@rahulshettyacademy.com,Android12345,IPHONE 13 PRO)</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.findElement(org.openqa.selenium.By)&quot; because &quot;prod&quot; is null
-	at ecommerce.pageObjects.ProductPage.addProductToCart(ProductPage.java:48)
-	at ecommerce.tests.SubmitOrderTest.submitOrder(SubmitOrderTest.java:26)
+                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
+[public void ecommerce.tests.SubmitOrderTest.submitOrder(java.lang.String,java.lang.String,java.lang.String) throws java.io.IOException,java.lang.InterruptedException] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: submitOrder([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2])
+Arguments: [(java.lang.String) rhein.bermillo1@rahulshettyacademy.com,(java.lang.String) ZARA COAT 3]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 17 stack frames
+... Removed 12 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -166,10 +167,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ZARA COAT 3)">
-                  </a> <!-- submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ZARA COAT 3) -->
+                  <a name="submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ADIDAS ORIGINAL)">
+                  </a> <!-- submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ADIDAS ORIGINAL) -->
                   <span class="method-name">submitOrder</span>
-                  <span class="parameters">(rhein.bermillo@rahulshettyacademy.com,Android12345,ZARA COAT 3)</span>
+                  <span class="parameters">(rhein.bermillo@rahulshettyacademy.com,Android12345,ADIDAS ORIGINAL)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -256,16 +257,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'submitOrder')
 data.setCell(0, 2, 'ecommerce.tests.SubmitOrderTest')
-data.setCell(0, 3, 14797);
+data.setCell(0, 3, 7568);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'submitOrder')
 data.setCell(1, 2, 'ecommerce.tests.SubmitOrderTest')
-data.setCell(1, 3, 971);
+data.setCell(1, 3, 2888);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 24 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -308,31 +309,23 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">ecommerce.tests.SubmitOrderTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ZARA COAT 3)</span>
-                <span class="method-start">4207 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">19007 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchApplication</span>
-                <span class="method-start">19065 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">submitOrder(rhein.bermillo1@rahulshettyacademy.com, Android12345, IPHONE 13 PRO)</span>
-                <span class="method-start">23775 ms</span>
+                <span class="method-name">submitOrder</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">15 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">submitOrder(rhein.bermillo@rahulshettyacademy.com, Android12345, ADIDAS ORIGINAL)</span>
+                <span class="method-start">4628 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">24747 ms</span>
+                <span class="method-start">7517 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

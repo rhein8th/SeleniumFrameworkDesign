@@ -5,7 +5,7 @@
     <classes>
       <class name="ecommerce.tests.SubmitOrderTest">
         <methods>
-          <include name="submitOrder"/>
+          <include name="submitOrder" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
           <include name="OrderHistoryTest"/>
