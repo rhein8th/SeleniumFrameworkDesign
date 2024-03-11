@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import ecommerce.pageObjects.CartPage;
+import ecommerce.pageObjects.OrderPage;
 
 public class AbstractComponent {
 	WebDriver driver;
@@ -21,9 +22,23 @@ public class AbstractComponent {
 	@FindBy(css="[routerlink*='cart']")
 	WebElement cartHeader;
 	
-
+	//Page Factory Header #############################################
+	@FindBy(css="[routerlink*='myorders']")
+	WebElement orderHeader;
 	
 	// Action Classes ##################################################
+	public CartPage goToCartPage(){
+
+		cartHeader.click();
+		CartPage cartPage = new CartPage(driver);
+		return cartPage;
+	}
+	
+	public OrderPage goToOrdersPage(){
+		orderHeader.click();
+		OrderPage orderPage = new OrderPage(driver);
+		return orderPage;
+	}
 	public void waitForElementToAppear(By findBy){
 
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
@@ -36,13 +51,7 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 		
 	}
-	public CartPage goToCartPage(){
 
-		cartHeader.click();
-		CartPage cartPage = new CartPage(driver);
-		return cartPage;
-		
-	}
 	
 	public void waitForElementToDisappear(WebElement ele) {
 		//Thread.sleep(5000);
